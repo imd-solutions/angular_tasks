@@ -1,0 +1,24 @@
+<label [class]="cssLabelClass" [for]="id">
+    {{ labelText }}
+  </label>
+  <div class="control has-icons-left">
+  <input
+    [name]="name"
+    [class]="cssInputClass"
+    [ngClass]="[error === true ? 'input is-danger': 'input is-normal']"
+    [id]="id"
+    [type]="type"
+    [placeholder]="placeHolder"
+    (change)="inputTextValue($event)"
+  />    
+  <span class="icon is-small is-left">
+    <i 
+      [class]="icon"
+      [ngClass]="[error === true ? 'dangerColour': 'is-normal']"
+    >
+  </i>
+  </span>
+</div>
+  <p *ngIf="error" class="has-text-danger">
+    {{ errorMessage }}
+  </p>

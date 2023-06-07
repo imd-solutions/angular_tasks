@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "email": "user@test.com",
+      "password": "$2a$10$CZMB7UODmDkbYEKzcsJbp.8UsEyJRy0vZPQMMhFeck3dXV97L8BCK",
+      "firstname": "Olivier",
+      "lastname": "Monge",
+      "age": 32,
+      "id": 1
+    },
+    {
+      "email": "dipo@george.com",
+      "password": "$2a$10$wJ.ODxjrBoKArzDIAEB5POBJQ9Lg4Auj59VOq3gbmptEvyf0sR9.O",
+      "firstname": "Dipo",
+      "lastname": "George",
+      "telephone": "01234567890",
+      "id": 2
+    },
+    {
+      "email": "test.user@test.com",
+      "password": "$2a$10$dEguV.GlyK4JUkogyusqk.cKVQJHST1v7nzNuprvlJGFoJXZYdCdO",
+      "firstname": "Test",
+      "lastname": "User",
+      "telephone": "01234567890",
+      "id": 3
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "title": "List 1",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "List 2",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "title": "List 3",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "title": "List 4",
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "title": "List 5",
+      "userId": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "listId": 1,
+      "title": "Task 1:1",
+      "completed": false,
+      "description": "This is the new description for Task 1"
+    },
+    {
+      "id": 2,
+      "listId": 1,
+      "title": "Task 1:2",
+      "completed": false,
+      "description": "This is the new description for Task 2"
+    },
+    {
+      "id": 3,
+      "listId": 2,
+      "title": "Task 2:1",
+      "completed": false,
+      "description": "This is the description for Task 3"
+    },
+    {
+      "id": 7,
+      "listId": 2,
+      "title": "Task 2:2",
+      "completed": false,
+      "description": "This is the description for Task 7"
+    },
+    {
+      "id": 8,
+      "listId": 3,
+      "title": "Task 3:1",
+      "completed": false,
+      "description": "This is the description for Task 8"
+    },
+    {
+      "id": 9,
+      "listId": 3,
+      "title": "Task 3:2",
+      "completed": false,
+      "description": "This is the description for Task 9"
+    },
+    {
+      "id": 10,
+      "listId": 4,
+      "title": "Task 4:2",
+      "completed": false,
+      "description": "This is the description for Task 10"
+    },
+    {
+      "title": "Task 5:1",
+      "listId": "5",
+      "id": 16,
+      "completed": false,
+      "description": "This is the description for Task 16"
+    }
+  ]
+}

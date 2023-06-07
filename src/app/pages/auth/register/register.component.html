@@ -1,0 +1,171 @@
+
+<section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-5-tablet is-6-desktop is-6-widescreen">
+            <form [formGroup]="registerForm" (ngSubmit)="onFormSubmit()"class="box">
+            <div class="columns is-multiline">    
+              <div class="field column is-half">
+                <InputText
+                    formControlName="firstname"
+                    name="registerFirstName"
+                    cssLabelClass="has-text-weight-semibold"
+                    cssInputClass="input is-normal"
+                    placeHolder="Your First name"
+                    ngDefaultControl
+                    labelText="Firstname"
+                    icon="fa fa-user"
+                    id="registerFirstnameInputText"
+                    type="text"
+                    placeHolder="Your first name"
+                    ngDefaultControl
+                    [error]="
+                    registerFormControl['firstname'].status !== 'VALID' && submitted
+                    "
+                    errorMessage="The firstname field is invalid."
+                />                
+              </div>
+              <div class="field column is-half">
+                <InputText
+                formControlName="lastname"
+                name="registerLastName"
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                icon="fa fa-user"
+                placeHolder="Your Last name"
+                ngDefaultControl
+                labelText="Lastname"
+                id="registerLastnameInputText"
+                type="text"
+                ngDefaultControl
+                [error]="
+                  registerFormControl['lastname'].status !== 'VALID' && submitted
+                "
+                errorMessage="The lastname field is invalid."
+              />
+              </div>
+            </div>
+              <div class="field">
+                <InputText
+                formControlName="email"
+                name="registerEmailAddress" 
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Email Address"
+                icon="fa fa-envelope"
+                id="registerEmailInputText"
+                type="email"
+                placeHolder="Your email address"
+                ngDefaultControl
+                [error]="registerFormControl['email'].status !== 'VALID' && submitted"
+                errorMessage="The email field is invalid."
+              />
+              </div>
+              <div class="field">
+                <InputText
+                formControlName="telephone"
+                name="registerTelephone" 
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Telephone Number"
+                icon="fa fa-phone"
+                id="registerTelephoneInputText"
+                type="text"
+                placeHolder="Your telephone number"
+                ngDefaultControl
+                [error]="
+                  registerFormControl['telephone'].status !== 'VALID' && submitted
+                "
+                errorMessage="The telephone field is invalid."
+              />
+              </div>
+              <div class="field">
+                <InputText
+                formControlName="password"
+                name="registerPassword" 
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Password"
+                icon="fa fa-lock"
+                id="registerPasswordInputText"
+                type="password"
+                placeHolder="Your Password"
+                ngDefaultControl
+                [error]="
+                  registerFormControl['password'].status !== 'VALID' && submitted
+                "
+                errorMessage="The password field is invalid."
+              />
+              </div>
+              <div class="field">
+                <InputText
+                formControlName="confirmPassword"
+                name="registerConfirmPassword" 
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Confirm Password"
+                icon="fa fa-lock"
+                id="registerConfirmPasswordInputText"
+                type="password"
+                placeHolder="Confirm Your Password"
+                ngDefaultControl
+                [error]="
+                  registerFormControl['confirmPassword'].status !== 'VALID' && submitted
+                "
+                errorMessage="The confirm password field is invalid or doesn't match password."
+              />
+              </div>
+              <div class="field">
+                <InputCheckbox
+                formControlName="terms"
+                name="registerTerms"
+                class="absolute h-6 w-6 focus:ring-blue-500 dark:focus:ring-blue-600 checkboxstyle"
+                id="registerTermsConditionCheckbox"
+                ngDefaultControl
+                [error]="
+                  registerFormControl['terms'].status !== 'VALID' && submitted
+                "
+              />
+              <label
+                class="text-gray-500 font-bold ml-8"
+                for="signUpLightReverseCheckbox3-1"
+              >
+                <span class="ml-2">By signing up, I agree to the</span>
+                <a
+                  class="has-text-link"
+                  [routerLink]="['/legal/terms-and-conditions']"
+                >
+                Terms &amp; Conditions
+                </a>
+              </label>
+            </div>
+            <p
+              *ngIf="
+                registerFormControl['terms'].status !== 'VALID' && submitted
+              "
+              class="has-text-danger"
+            >
+              Please confirm that you have read the terms and conditions.
+            </p>
+              
+              <div class="mb-3">
+                <p>
+                  Already a member? <a class="has-text-link" [routerLink]="['/auth/login']">Login Here</a>
+                </p>                
+              </div>
+             
+              <div class="field mt-8">
+                <EventButton
+                  type="submit"
+                  btnCss="button is-primary has-text-white"
+                  btnText="Register"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

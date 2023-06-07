@@ -1,0 +1,64 @@
+<section class="hero is-primary is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()" class="box">
+            <div class="field">
+              <InputText
+                formControlName="email"
+                name="authEmail"
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Email Address"
+                icon="fa fa-envelope"
+                id="logInEmailInputText"
+                type="email"
+                placeHolder="Enter Your Email Address"
+                ngDefaultControl
+                [error]="
+                  loginFormControl['email'].status !== 'VALID' && submitted
+                "
+                errorMessage="The Email field is invalid."
+              />
+            </div>
+            <div class="field">
+              <InputText
+                formControlName="password"
+                name="authPassword"
+                cssLabelClass="has-text-weight-semibold"
+                cssInputClass="input is-normal"
+                labelText="Password"
+                icon="fa fa-lock"
+                id="logInPasswordInputText"
+                type="password"
+                placeHolder="Enter your password"
+                ngDefaultControl
+                [error]="
+                  loginFormControl['password'].status !== 'VALID' && submitted
+                "
+                errorMessage="The Password field is invalid."
+              />
+            </div>
+            <div class="mb-3">
+              <p>
+                Not yet a member? <a class="has-text-link" [routerLink]="['/auth/register']">Register Here</a>
+              </p>
+              <p>
+                <a class="has-text-info" href="#">Forgot password?</a>
+              </p>
+            </div>
+           
+            <div class="field mt-8">
+              <EventButton
+                type="submit"
+                btnCss="button is-primary has-text-white"
+                btnText="Sign In"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
